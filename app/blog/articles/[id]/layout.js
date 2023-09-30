@@ -1,3 +1,5 @@
-export default function Layout({ params: { id }, post, topic }){
-	return <div>{id === 'asdf' ? topic : post}</div>;
+export default function Layout({ params: { id }, post, topic, abc }){
+	let conditionalRoute = id === 'asdf' ? topic : post;
+	conditionalRoute = id === 'abc' ? abc : conditionalRoute;
+	return <div>{conditionalRoute}</div>;
 }
